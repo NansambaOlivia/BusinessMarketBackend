@@ -1,0 +1,12 @@
+# Tech Stack
+- Python
+- Django
+- Django REST Framework
+- JWT Authentication (SimpleJWT)
+
+## Core Features
+- Authentication and users
+- Role-based permissions
+- Product approval workflow
+- API design
+
