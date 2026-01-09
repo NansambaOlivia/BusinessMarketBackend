@@ -33,5 +33,13 @@ class BusinessAdmin(admin.ModelAdmin):
 
 @admin.register(Role)
 class RoleAdmin(admin.ModelAdmin):
-    list_display = ('name', 'can_create_product', 'can_edit_product', 'can_approve_product', 'can_manage_users')
-    list_filter = ('can_create_product', 'can_edit_product', 'can_approve_product', 'can_manage_users')
+    list_display = ('name', 'can_create_product', 'can_edit_product', 'can_approve_product', 'can_delete_product', 'can_manage_users')
+    list_filter = ('can_create_product', 'can_edit_product', 'can_approve_product', 'can_delete_product', 'can_manage_users')
+    fieldsets = (
+        (None, {
+            'fields': ('name',)
+        }),
+        ('Permissions', {
+            'fields': ('can_create_product', 'can_edit_product', 'can_approve_product', 'can_delete_product', 'can_manage_users')
+        }),
+    )
